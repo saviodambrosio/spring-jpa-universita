@@ -1,0 +1,28 @@
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<title>Departments</title>
+	</head>
+	<body>
+		<h1>Departments</h1>
+		<table>
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Address</th>
+					<th>Phone</th>
+					<th>Website</th>
+					<th>Head</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="item : ${list}">
+					<td th:text="${item.name}"></td>
+					<td th:text="${item.address}"></td>
+					<td th:text="${item.phone}"></td>
+					<td th:text="${item.website}"></td>
+					<td th:text="${item.headOfDepartment}"></td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+</html>
